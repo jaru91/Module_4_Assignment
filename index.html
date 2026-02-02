@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ SEO: Meta Description -->
+    <meta
+      name="description"
+      content="A semantic, responsive personal webpage using CSS Grid and interactive UI states for accessibility."
+    />
+
+    <!-- ✅ SEO: Meaningful title -->
+    <title>Jay-Ar Bote | Semantic & Responsive Webpage</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ✅ Header -->
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <h1>Jay-Ar Bote</h1>
+        <p class="subtitle">Faith • Family • Growth • Tech Journey</p>
+
+        <!-- ✅ Navigation with section links -->
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ✅ Main content -->
+    <main class="page-layout">
+      <!-- ✅ Section 1 -->
+      <section class="card" id="about">
+        <h2>About</h2>
+
+        <!-- ✅ Article inside section -->
+        <article>
+          <p>
+            Hi! I’m Jay-Ar, a civil engineer transitioning into software
+            development. This page demonstrates semantic HTML for accessibility
+            and SEO, and modern CSS layout techniques.
+          </p>
+          <p>
+            I’m currently learning full-stack development and building projects
+            step by step.
+          </p>
+        </article>
+
+        <!-- ✅ Interactive element -->
+        <a class="btn" href="#projects">See My Projects</a>
+      </section>
+
+      <!-- ✅ Section 2 -->
+      <section class="card" id="skills">
+        <h2>Skills</h2>
+
+        <article>
+          <ul class="pill-list">
+            <li>HTML5</li>
+            <li>CSS Grid</li>
+            <li>Flexbox</li>
+            <li>Responsive Design</li>
+            <li>JavaScript Basics</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- ✅ Section 3 -->
+      <section class="card" id="projects">
+        <h2>Projects</h2>
+
+        <article class="projects">
+          <div class="project">
+            <h3>Mini Portfolio</h3>
+            <p>
+              A clean webpage showcasing personal profile with semantic
+              structure.
+            </p>
+            <button class="btn" type="button">View</button>
+          </div>
+
+          <div class="project">
+            <h3>Simple Layout Practice</h3>
+            <p>
+              A responsive grid layout that adapts to mobile, tablet, and
+              desktop screens.
+            </p>
+            <button class="btn" type="button">View</button>
+          </div>
+
+          <div class="project">
+            <h3>Interactive UI Demo</h3>
+            <p>
+              Hover, focus, and active states with transitions for better UX.
+            </p>
+            <button class="btn" type="button">View</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- ✅ Section 4 -->
+      <section class="card" id="contact">
+        <h2>Contact</h2>
+
+        <article>
+          <p>If you'd like to connect, you can reach me here:</p>
+
+          <ul class="contact-list">
+            <li><strong>Email:</strong>jmbote@gmail.com</li>
+            <li><strong>Location:</strong> Singapore</li>
+          </ul>
+
+          <!-- ✅ Accessible link -->
+          <a class="link" href="#top">Back to top ↑</a>
+        </article>
+      </section>
+    </main>
+
+    <!-- ✅ Footer -->
+    <footer class="site-footer">
+      <p>© 2026 Jay-Ar Bote — Built with Semantic HTML + Responsive CSS</p>
+    </footer>
+  </body>
+</html>
