@@ -1,0 +1,221 @@
+/* -----------------------------
+   Base (Mobile-first) Styles
+------------------------------ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 1rem; /*  Relative unit */
+  background: #f6f7fb;
+  color: #1d1d1f;
+}
+
+/*  Header */
+.site-header {
+  background: #1f2937;
+  color: #fff;
+  padding: 1.25rem 1rem;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  margin-top: 0.25rem;
+  opacity: 0.9;
+}
+
+/*  Navigation */
+.site-nav {
+  display: flex; /* Flexbox for nav */
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.12);
+
+  /*  Smooth hover */
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+/*  Interactive pseudo-classes */
+.site-nav a:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+}
+
+.site-nav a:focus {
+  outline: 3px solid #93c5fd; /*  visible focus */
+  outline-offset: 2px;
+}
+
+.site-nav a:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+/*  Layout container: CSS Grid */
+.page-layout {
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr; /*  Mobile default: 1 column */
+  gap: 1rem;
+}
+
+/*  Cards (visual distinction) */
+.card {
+  background: #fff;
+  border: 1px solid #e6e6ea;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+/*  Buttons (interactive elements) */
+.btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  border: none;
+  cursor: pointer;
+
+  background: #2563eb;
+  color: #fff;
+  padding: 0.65rem 0.95rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.btn:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+.btn:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+/*  Lists */
+.pill-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.pill-list li {
+  background: #eef2ff;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.contact-list {
+  padding-left: 1rem;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.link:hover {
+  opacity: 0.85;
+}
+
+.link:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+/* Projects inside projects section */
+.projects {
+  display: grid;
+  gap: 1rem;
+}
+
+.project {
+  border: 1px solid #e6e6ea;
+  border-radius: 0.9rem;
+  padding: 0.9rem;
+  background: #fafafa;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111827;
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* ---------------------------------------
+   Responsive Design (Tablet & Desktop)
+---------------------------------------- */
+
+/* Tablet: 2 columns */
+@media (min-width: 700px) {
+  body {
+    font-size: 1.05rem; /* readability */
+  }
+
+  .page-layout {
+    grid-template-columns: 1fr 1fr; /* 2-column layout */
+  }
+
+  #projects {
+    grid-column: 1 / -1; /* Projects spans full width */
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop: 3 columns + bigger spacing */
+@media (min-width: 1000px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  .page-layout {
+    gap: 1.25rem;
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
